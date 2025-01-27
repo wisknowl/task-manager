@@ -19,7 +19,7 @@ This is a simple Task Management Application built with Laravel. Users can manag
 ## Installation
 
 ### Step 1: Clone the Repository
-```bash
+
 git clone https://github.com/yourusername/task-manager.git
 cd task-manager
 
