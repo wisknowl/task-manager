@@ -20,25 +20,24 @@ This is a simple Task Management Application built with Laravel. Users can manag
 
 ### Step 1: Clone the Repository
 
-git clone https://github.com/wisknowl/task-manager.git
-cd task-manager
+- git clone https://github.com/wisknowl/task-manager.git
+- Username: Wisknowl, Password: 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
+- cd task-manager
 
 ### Step 2: Install Dependencies
 
-composer install
-npm install
-npm run dev
+- composer install
+- npm install
+- npm run dev
 
 ### Step 3: Setup the environment variables
 
-cp .env.example .env
+- cp .env.example .env
 
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=task_manager
-DB_USERNAME=your_username
-DB_PASSWORD=your_password
+- DB_CONNECTION=mysql
+- DB_HOST=127.0.0.1
+- DB_PORT=3306
+- DB_DATABASE=task_manager
 
 ### Step 4: Creating Database
 
@@ -49,9 +48,9 @@ DB_PASSWORD=your_password
 - The application will be available at http://localhost:8000.
 
 ### Step 5: Running seeder
-- Run seeder to create test user and populate task table on database: 
-php artisan migrate:fresh --seed      
-php artisan db:seed --class=TaskSeeder
+Run seeder to create test user and populate task table on database: 
+- php artisan migrate:fresh --seed      
+- php artisan db:seed --class=TaskSeeder
 
 ### Step 6: Login Details
 
