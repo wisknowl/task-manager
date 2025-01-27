@@ -21,7 +21,6 @@ This is a simple Task Management Application built with Laravel. Users can manag
 ### Step 1: Clone the Repository
 
 - git clone https://github.com/wisknowl/task-manager.git
-- Username: Wisknowl, Password: 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
 - cd task-manager
 
 ### Step 2: Install Dependencies
