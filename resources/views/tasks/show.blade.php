@@ -225,7 +225,7 @@
                             <h3 class="text-sm font-semibold uppercase text-gray-600 dark:text-gray-400">
                                 Status
                             </h3>
-                            <span class="mt-1 inline-block px-2 py-1 text-sm rounded-full bg-red-100 text-red-800 dark:bg-red-800/30 dark:text-red-500">
+                            <span class="px-2 py-1 text-sm rounded-full {{ $task->status === 'completed' ? 'bg-green-100 text-green-800 dark:bg-green-800/30 dark:text-green-500' : 'bg-red-100 text-red-800 dark:bg-red-800/30 dark:text-red-500' }}">
                                 {{ $task->status }}
                             </span>
                         </div>

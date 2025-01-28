@@ -10,8 +10,7 @@ class TaskController extends Controller
 {
     public function index(Request $request)
     {
-        $query = Task::where('user_id', Auth::id());
-
+        $query = Task::where('user_id', Auth::id())->orderBy('id', 'desc');
         // Filter by status if provided
         if ($request->has('status')) {
             $query->where('status', $request->status);
@@ -39,7 +38,7 @@ class TaskController extends Controller
             }
         }
 
-        $tasks = $query->get();
+        $tasks = $query->paginate(7);
         return view('tasks.index', compact('tasks'));
     }
 
@@ -50,6 +49,8 @@ class TaskController extends Controller
 
     public function store(Request $request)
     {
+// dd($request->title);
+
         $request->validate([
             'title' => 'required|min:5',
             'status' => 'in:pending,in-progress,completed',
@@ -90,7 +91,7 @@ class TaskController extends Controller
         ]);
 // dd(2);
         $task->update($request->all());
-        return redirect()->route('tasks.index');
+        return redirect()->back();
     }
 
     public function destroy(Task $task)
